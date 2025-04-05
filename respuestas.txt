@@ -1,0 +1,8 @@
+¿Puede ver el archivo tp2_1_2.c? ¿Por qué? 
+ no por que el archivo c que cree en opcion 2 esta en otra rama, y yo me movi a main
+
+  En VSCode vuelva al “Source Control” ¿Qué diferencias nota?
+  que aparece en color amarillo la otra rama
+
+  En VSCode vuelva al “Source Control” vea los cambios, ¿Qué nota?
+aparece ahora la rama amarilla conectada a main luego de merge
