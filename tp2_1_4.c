@@ -17,4 +17,6 @@ int main (){
     Compu *computadoras = malloc(sizeof(Compu) * CANT_PC);
 
     computadoras[1] = (Compu){1, 2016, 8, "Intel"};
+
+    free(computadoras);
 }
