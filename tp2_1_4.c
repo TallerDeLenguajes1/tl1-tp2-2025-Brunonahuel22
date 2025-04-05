@@ -13,3 +13,8 @@ struct
     char *tipo_cpu;       // Tipo de procesador
 } typedef Compu;
 
+int main (){
+    Compu *computadoras = malloc(sizeof(Compu) * CANT_PC);
+
+    computadoras[1] = (Compu){1, 2016, 8, "Intel"};
+}
