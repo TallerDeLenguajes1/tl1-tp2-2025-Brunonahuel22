@@ -16,6 +16,7 @@ struct
 
 void liberarMemoria(Compu *computa, int n);
 void listarPCs(Compu pcs[], int cantidad);
+void mostrarMasVieja(Compu pcs[], int cantidad);
 
 int main()
 {
@@ -36,6 +37,7 @@ int main()
     }
 
     listarPCs(computadoras, CANT_PC);
+    mostrarMasVieja(computadoras, CANT_PC);
     liberarMemoria(computadoras, CANT_PC);
 }
 
@@ -53,6 +55,25 @@ void listarPCs(Compu pcs[], int cantidad)
         printf("  Tipo CPU: %s\n", pcs[i].tipo_cpu);
         printf("-------------------------------------------------\n");
     }
+}
+
+void mostrarMasVieja(Compu pcs[], int cantidad)
+{
+    int indice_mas_vieja = 0;
+    for (int i = 1; i < cantidad; i++)
+    {
+        if (pcs[i].anio < pcs[indice_mas_vieja].anio)
+        {
+            indice_mas_vieja = i;
+        }
+    }
+
+    printf("\nPC más vieja:\n");
+    printf("  Velocidad: %d GHz\n", pcs[indice_mas_vieja].velocidad);
+    printf("  Año: %d\n", pcs[indice_mas_vieja].anio);
+    printf("  Núcleos: %d\n", pcs[indice_mas_vieja].cantidad_nucleos);
+    printf("  Tipo CPU: %s\n", pcs[indice_mas_vieja].tipo_cpu);
+    printf("-------------------------------------------------\n");
 }
 
 void liberarMemoria(Compu *computa, int n)
